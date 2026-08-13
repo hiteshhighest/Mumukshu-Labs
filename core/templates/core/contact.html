@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact | Mumukshu Labs{% endblock %}
+
+{% block content %}
+<section class="py-20 px-6 max-w-4xl mx-auto">
+  <h1 class="text-5xl font-black text-white uppercase mb-4">Get In <span class="text-brand-orange">Touch</span></h1>
+  <p class="text-zinc-400 mb-12">Have a project idea, want to organize a workshop, or join our community? Send us a direct message.</p>
+
+  <div class="bg-white/5 backdrop-blur-xl p-8 md:p-12 border border-white/10 rounded-3xl shadow-2xl">
+    <form method="POST" class="space-y-6">
+      {% csrf_token %}
+      <div>
+        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Your Name</label>
+        <input type="text" name="name" required class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition">
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Your Email</label>
+        <input type="email" name="email" required class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition">
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Message</label>
+        <textarea name="message" rows="5" required class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 text-black font-black uppercase tracking-wider py-4 rounded-xl transition shadow-lg shadow-brand-orange/20">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+{% endblock %}
