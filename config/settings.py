@@ -117,10 +117,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@gmail.com'    
-EMAIL_HOST_PASSWORD = 'your-app-password' 
+EMAIL_HOST_USER = 'progsmiler@gmail.com'    
+EMAIL_HOST_PASSWORD = 'dqbk ilko ifix eeyd' 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-NOTIFICATION_EMAIL = 'your-email@gmail.com'
+NOTIFICATION_EMAIL = 'progsmiler@gmail.com'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
