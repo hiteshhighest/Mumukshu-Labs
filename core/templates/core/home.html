@@ -1,50 +1,117 @@
 {% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Mumukshu Labs | Home{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
-<section class="py-32 px-6 text-center">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-6xl md:text-8xl font-black tracking-tight text-white mb-6 uppercase leading-none">
-      IDEAS. CODE. <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-orange-400 to-white">IMPACT.</span>
-    </h1>
-    <p class="text-lg md:text-xl text-zinc-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-      Mumukshu Labs is built around curiosity, creativity, and collaboration. We learn by doing — building real projects and turning ideas into software.
-    </p>
-    <a href="#join" class="inline-block bg-brand-orange hover:bg-orange-600 text-black font-extrabold text-lg px-8 py-4 rounded-full transition shadow-xl shadow-brand-orange/20">
-      JOIN NOW
+<section class="min-h-[85vh] flex flex-col items-center justify-center text-center px-6 py-12">
+  
+  <!-- Logo Container Box -->
+  <div class="glass-card w-44 h-44 md:w-52 md:h-52 rounded-[2.5rem] p-6 mb-8 flex items-center justify-center shadow-2xl hover:scale-105 transition duration-500">
+    <img src="{% static 'images/logo.png' %}" alt="Mumukshu Labs Logo" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/180x180/090909/ffffff?text=Mumukshu'">
+  </div>
+
+  <!-- Giant Brutalist Typography Header -->
+  <h1 class="text-5xl sm:text-7xl md:text-9xl font-bold tracking-tighter leading-none text-black uppercase mb-4">
+    MUMUKSHU <span class="block text-stroke text-stroke-thick">L A B S</span>
+  </h1>
+
+  <p class="text-xl md:text-3xl font-bold tracking-tight text-black mb-10">
+    IDEAS. CODE. IMPACT.
+  </p>
+
+  <!-- Hero CTA Buttons -->
+  <div class="flex flex-wrap items-center justify-center gap-4">
+    <a href="#join" class="bg-black hover:bg-zinc-800 text-white font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-full transition shadow-xl hover:-translate-y-1">
+      JOIN US
+    </a>
+    <a href="{% url 'about' %}" class="glass-card hover:bg-white text-black font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-full border border-black/10 transition hover:-translate-y-1">
+      EXPLORE
     </a>
   </div>
 </section>
 
-<!-- Banner -->
-<section class="py-8 bg-brand-orange/90 backdrop-blur-md text-black text-center px-6 font-black uppercase tracking-wider text-xl md:text-2xl">
-  WE ROCK TOGETHER 🤘 AT EVERYTHING WE DO IN TECH.
+<!-- Section 01 / Overview Banner -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <div class="text-xs font-bold text-zinc-500 tracking-[0.25em] uppercase mb-4">01 / ABOUT</div>
+  
+  <div class="glass-card rounded-[2.5rem] p-8 md:p-14">
+    <h2 class="text-3xl md:text-6xl font-bold tracking-tighter text-black uppercase mb-8 leading-tight">
+      LESS THEORY.<br><span class="text-brand-orange">MORE BUILDING.</span>
+    </h2>
+    <p class="text-lg md:text-2xl font-medium leading-relaxed text-zinc-800 mb-4">
+      <strong class="text-brand-orange font-bold">Mumukshu Labs</strong> is a student-driven technology community built around curiosity, creativity, and collaboration.
+    </p>
+    <p class="text-lg md:text-2xl font-medium leading-relaxed text-zinc-800">
+      We learn by doing — building projects, experimenting with tech, and helping each other turn ideas into functional applications.
+    </p>
+  </div>
 </section>
 
-<!-- Join Form (Glass Card) -->
-<section id="join" class="py-24 px-6 max-w-3xl mx-auto">
-  <div class="bg-white/5 backdrop-blur-xl p-8 md:p-12 border border-white/10 rounded-3xl shadow-2xl">
-    <h2 class="text-3xl font-black text-white uppercase mb-2">Join the Community</h2>
-    <p class="text-zinc-400 text-sm mb-8">Bring your curiosity, your ideas, and your willingness to build together.</p>
+<!-- Community Showcase Section -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <div class="text-xs font-bold text-zinc-500 tracking-[0.25em] uppercase mb-4">02 / COMMUNITY</div>
+  
+  <div class="glass-card rounded-[2.5rem] p-8 md:p-14 text-center">
+    <h2 class="text-xs font-bold tracking-[0.2em] text-zinc-600 uppercase mb-8">FOLLOW US ON INSTAGRAM</h2>
+    
+    <div class="max-w-xs mx-auto rounded-3xl overflow-hidden shadow-xl mb-8 border border-white/80">
+      <img src="{% static 'images/insta.jpg' %}" alt="Mumukshu Labs Instagram" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x600/FF5F46/ffffff?text=Instagram+@mumukshu.labs'">
+    </div>
 
-    <form method="POST" class="space-y-6">
-      {% csrf_token %}
-      <div>
-        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Full Name</label>
-        <input type="text" name="full_name" required placeholder="Your Name" class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition">
+    <a href="https://www.instagram.com/mumukshu.labs/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-black hover:bg-zinc-800 text-white font-bold text-xs tracking-wider uppercase px-8 py-4 rounded-full transition shadow-lg hover:-translate-y-1">
+      @MUMUKSHU.LABS ↗
+    </a>
+  </div>
+</section>
+
+<!-- Section 03 / Join Section with Django Native Form -->
+<section id="join" class="max-w-6xl mx-auto px-6 py-16">
+  <div class="text-xs font-bold text-zinc-500 tracking-[0.25em] uppercase mb-4">03 / JOIN</div>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    
+    <div class="lg:col-span-5">
+      <h2 class="text-4xl md:text-7xl font-bold tracking-tighter text-black uppercase leading-none mb-6">
+        WANNA<br><span class="text-brand-orange">JOIN?</span>
+      </h2>
+      <p class="text-base md:text-lg font-medium text-zinc-700 leading-relaxed mb-4">
+        Open to students. Bring your curiosity, your ideas, and your willingness to build together.
+      </p>
+      <p class="text-sm font-bold text-black uppercase tracking-wider bg-white/40 border border-black/10 inline-block px-4 py-2 rounded-xl">
+        Join now guys it's free. 😎
+      </p>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl">
+        <div class="flex items-center justify-between text-xs font-bold tracking-widest text-zinc-500 uppercase pb-6 mb-6 border-b border-black/10">
+          <span>MEMBER REGISTRATION</span>
+          <span>{% now "Y" %}</span>
+        </div>
+
+        <form method="POST" class="space-y-6">
+          {% csrf_token %}
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-black mb-2">Full Name</label>
+            <input type="text" name="full_name" required placeholder="Your Name" class="w-full bg-white/70 border border-black/10 rounded-2xl p-4 text-black font-medium focus:outline-none focus:border-brand-orange transition shadow-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-black mb-2">Email Address</label>
+            <input type="email" name="email" required placeholder="name@example.com" class="w-full bg-white/70 border border-black/10 rounded-2xl p-4 text-black font-medium focus:outline-none focus:border-brand-orange transition shadow-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-black mb-2">Tech Interests</label>
+            <input type="text" name="interests" placeholder="e.g. Django, Web Design, AI, Python" class="w-full bg-white/70 border border-black/10 rounded-2xl p-4 text-black font-medium focus:outline-none focus:border-brand-orange transition shadow-sm">
+          </div>
+          <button type="submit" class="w-full bg-black hover:bg-zinc-800 text-white font-bold uppercase tracking-wider py-4 rounded-2xl transition shadow-xl hover:-translate-y-0.5">
+            Submit Application
+          </button>
+        </form>
       </div>
-      <div>
-        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Email Address</label>
-        <input type="email" name="email" required placeholder="name@example.com" class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition">
-      </div>
-      <div>
-        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Tech Interests</label>
-        <input type="text" name="interests" placeholder="e.g. Django, AI, Web3, Mobile Dev" class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition">
-      </div>
-      <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 text-black font-black uppercase tracking-wider py-4 rounded-xl transition shadow-lg shadow-brand-orange/20">
-        Submit Application
-      </button>
-    </form>
+    </div>
+
   </div>
 </section>
 {% endblock %}

@@ -3,26 +3,32 @@
 {% block title %}Contact | Mumukshu Labs{% endblock %}
 
 {% block content %}
-<section class="py-20 px-6 max-w-4xl mx-auto">
-  <h1 class="text-5xl font-black text-white uppercase mb-4">Get In <span class="text-brand-orange">Touch</span></h1>
-  <p class="text-zinc-400 mb-12">Have a project idea, want to organize a workshop, or join our community? Send us a direct message.</p>
+<section class="max-w-4xl mx-auto px-6 py-12">
+  <div class="text-xs font-bold text-zinc-500 tracking-[0.25em] uppercase mb-4">CONTACT</div>
+  
+  <h1 class="text-4xl md:text-7xl font-bold tracking-tighter text-black uppercase mb-4">
+    GET IN <span class="text-brand-orange">TOUCH</span>
+  </h1>
+  <p class="text-zinc-700 text-base md:text-lg font-medium mb-10">
+    Have a project idea, want to organize a workshop, or join our community? Send us a direct message.
+  </p>
 
-  <div class="bg-white/5 backdrop-blur-xl p-8 md:p-12 border border-white/10 rounded-3xl shadow-2xl">
+  <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl">
     <form method="POST" class="space-y-6">
       {% csrf_token %}
       <div>
-        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Your Name</label>
-        <input type="text" name="name" required class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition">
+        <label class="block text-xs font-bold uppercase tracking-wider text-black mb-2">Your Name</label>
+        <input type="text" name="name" required placeholder="Your Name" class="w-full bg-white/70 border border-black/10 rounded-2xl p-4 text-black font-medium focus:outline-none focus:border-brand-orange transition shadow-sm">
       </div>
       <div>
-        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Your Email</label>
-        <input type="email" name="email" required class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition">
+        <label class="block text-xs font-bold uppercase tracking-wider text-black mb-2">Your Email</label>
+        <input type="email" name="email" required placeholder="name@example.com" class="w-full bg-white/70 border border-black/10 rounded-2xl p-4 text-black font-medium focus:outline-none focus:border-brand-orange transition shadow-sm">
       </div>
       <div>
-        <label class="block text-xs font-bold text-zinc-300 uppercase mb-2">Message</label>
-        <textarea name="message" rows="5" required class="w-full bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-brand-orange focus:outline-none transition"></textarea>
+        <label class="block text-xs font-bold uppercase tracking-wider text-black mb-2">Message</label>
+        <textarea name="message" rows="5" required placeholder="How can we help?" class="w-full bg-white/70 border border-black/10 rounded-2xl p-4 text-black font-medium focus:outline-none focus:border-brand-orange transition shadow-sm"></textarea>
       </div>
-      <button type="submit" class="w-full bg-brand-orange hover:bg-orange-600 text-black font-black uppercase tracking-wider py-4 rounded-xl transition shadow-lg shadow-brand-orange/20">
+      <button type="submit" class="w-full bg-black hover:bg-zinc-800 text-white font-bold uppercase tracking-wider py-4 rounded-2xl transition shadow-xl hover:-translate-y-0.5">
         Send Message
       </button>
     </form>

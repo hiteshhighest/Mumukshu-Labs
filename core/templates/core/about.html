@@ -1,43 +1,61 @@
 {% extends 'core/base.html' %}
 
-{% block title %}About Us | Mumukshu Labs{% endblock %}
+{% block title %}About | Mumukshu Labs{% endblock %}
 
 {% block content %}
-<section class="py-20 px-6 max-w-7xl mx-auto">
-  <h1 class="text-5xl font-black text-white uppercase mb-4">About <span class="text-brand-orange">Mumukshu Labs</span></h1>
-  <p class="text-zinc-400 text-lg max-w-2xl mb-16">We skip dry lectures and learn by actually shipping code and building creative tech.</p>
+<section class="max-w-6xl mx-auto px-6 py-12">
+  <div class="text-xs font-bold text-zinc-500 tracking-[0.25em] uppercase mb-4">01 / WHAT WE DO</div>
+  
+  <h1 class="text-4xl md:text-7xl font-bold tracking-tighter text-black uppercase mb-6">
+    ABOUT <span class="text-brand-orange">MUMUKSHU LABS</span>
+  </h1>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="bg-white/5 backdrop-blur-xl p-8 border border-white/10 rounded-2xl hover:border-brand-orange/50 transition duration-300">
-      <div class="text-3xl mb-4">🚀</div>
-      <h3 class="text-xl font-bold text-white mb-2">Build Projects</h3>
-      <p class="text-zinc-400 text-sm">Websites, software systems, and creative technology experiments built from scratch.</p>
+  <!-- Glass Card Feature Banner -->
+  <div class="glass-card rounded-[2.5rem] p-8 md:p-12 mb-12 text-center">
+    <h2 class="text-xl md:text-3xl font-bold text-black uppercase tracking-tight">
+      WE ROCK TOGETHER 🤘 AT EVERYTHING WE DO IN TECH.
+    </h2>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <div class="glass-card p-8 rounded-3xl hover:-translate-y-1 transition duration-300">
+      <div class="text-4xl mb-4">🚀</div>
+      <h3 class="text-xl font-bold text-black uppercase tracking-tight mb-2">Build Projects</h3>
+      <p class="text-zinc-700 text-sm font-medium leading-relaxed">Websites, software systems, and creative technology experiments built from scratch.</p>
     </div>
-    <div class="bg-white/5 backdrop-blur-xl p-8 border border-white/10 rounded-2xl hover:border-brand-orange/50 transition duration-300">
-      <div class="text-3xl mb-4">🧠</div>
-      <h3 class="text-xl font-bold text-white mb-2">Learn Together</h3>
-      <p class="text-zinc-400 text-sm">Share skills, troubleshoot collaboratively, and accelerate growth beyond traditional classrooms.</p>
+
+    <div class="glass-card p-8 rounded-3xl hover:-translate-y-1 transition duration-300">
+      <div class="text-4xl mb-4">🧠</div>
+      <h3 class="text-xl font-bold text-black uppercase tracking-tight mb-2">Learn Together</h3>
+      <p class="text-zinc-700 text-sm font-medium leading-relaxed">Share skills, troubleshoot collaboratively, and accelerate growth beyond traditional classrooms.</p>
     </div>
-    <div class="bg-white/5 backdrop-blur-xl p-8 border border-white/10 rounded-2xl hover:border-brand-orange/50 transition duration-300">
-      <div class="text-3xl mb-4">🔍</div>
-      <h3 class="text-xl font-bold text-white mb-2">Explore Tech</h3>
-      <p class="text-zinc-400 text-sm">Test new stacks, tools, frameworks, and unexplored domains of engineering.</p>
+
+    <div class="glass-card p-8 rounded-3xl hover:-translate-y-1 transition duration-300">
+      <div class="text-4xl mb-4">🔍</div>
+      <h3 class="text-xl font-bold text-black uppercase tracking-tight mb-2">Explore Tech</h3>
+      <p class="text-zinc-700 text-sm font-medium leading-relaxed">Test new stacks, tools, frameworks, and unexplored domains of engineering.</p>
     </div>
-    <div class="bg-white/5 backdrop-blur-xl p-8 border border-white/10 rounded-2xl hover:border-brand-orange/50 transition duration-300">
-      <div class="text-3xl mb-4">📅</div>
-      <h3 class="text-xl font-bold text-white mb-2">Workshops & Events</h3>
-      <p class="text-zinc-400 text-sm">Organizing hackathons, hands-on build sessions, and collaborative tech talks.</p>
+
+    <div class="glass-card p-8 rounded-3xl hover:-translate-y-1 transition duration-300">
+      <div class="text-4xl mb-4">📅</div>
+      <h3 class="text-xl font-bold text-black uppercase tracking-tight mb-2">Workshops & Events</h3>
+      <p class="text-zinc-700 text-sm font-medium leading-relaxed">Organizing hackathons, hands-on build sessions, and collaborative tech talks.</p>
     </div>
-    <div class="bg-white/5 backdrop-blur-xl p-8 border border-white/10 rounded-2xl hover:border-brand-orange/50 transition duration-300">
-      <div class="text-3xl mb-4">🤝</div>
-      <h3 class="text-xl font-bold text-white mb-2">Collaborate</h3>
-      <p class="text-zinc-400 text-sm">Partnering with student groups, developer clubs, and open-source communities.</p>
+
+    <div class="glass-card p-8 rounded-3xl hover:-translate-y-1 transition duration-300">
+      <div class="text-4xl mb-4">🤝</div>
+      <h3 class="text-xl font-bold text-black uppercase tracking-tight mb-2">Collaborate</h3>
+      <p class="text-zinc-700 text-sm font-medium leading-relaxed">Partnering with student groups, developer clubs, and open-source communities.</p>
     </div>
-    <div class="bg-white/5 backdrop-blur-xl p-8 border border-white/10 rounded-2xl hover:border-brand-orange/50 transition duration-300">
-      <div class="text-3xl mb-4">💡</div>
-      <h3 class="text-xl font-bold text-white mb-2">Ideas to Reality</h3>
-      <p class="text-zinc-400 text-sm">Transforming rough whiteboard concepts into functional production applications.</p>
+
+    <div class="glass-card p-8 rounded-3xl hover:-translate-y-1 transition duration-300">
+      <div class="text-4xl mb-4">💡</div>
+      <h3 class="text-xl font-bold text-black uppercase tracking-tight mb-2">Ideas to Reality</h3>
+      <p class="text-zinc-700 text-sm font-medium leading-relaxed">Transforming rough whiteboard concepts into functional production applications.</p>
     </div>
+
   </div>
 </section>
 {% endblock %}
